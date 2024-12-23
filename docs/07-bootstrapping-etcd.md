@@ -66,6 +66,11 @@ Each etcd member must have a unique name within an etcd cluster. Set the etcd na
 ```bash
 ETCD_NAME=$(hostname -s)
 ```
+Get primary ip address of each master node
+
+```bash
+PRIMARY_IP=$(hostname -I | awk '{print $2}')
+```
 
 Create the `etcd.service` systemd unit file:
 
