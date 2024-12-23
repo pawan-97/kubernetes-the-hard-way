@@ -109,6 +109,7 @@ All the following commands from here until the [verification](#verification) ste
 
 ```bash
 KUBE_VERSION=$(curl -L -s https://dl.k8s.io/release/stable.txt)
+ARCH=$(dpkg --print-architecture)
 
 wget -q --show-progress --https-only --timestamping \
   https://dl.k8s.io/release/${KUBE_VERSION}/bin/linux/${ARCH}/kube-proxy \
